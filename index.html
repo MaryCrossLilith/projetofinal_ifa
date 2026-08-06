@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Óptica: Como a Luz nos Permite Enxergar o Mundo</title>
+    <style>
+        /* Estilos CSS (Visual do Site) */
+        :root {
+            --primary-color: #0b2545;
+            --secondary-color: #13315c;
+            --accent-color: #ffd166;
+            --text-color: #333;
+            --bg-color: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Menu de Navegação */
+        header {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Banner Principal */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        /* Seções de Conteúdo */
+        section {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* Layout de Grade para Lentes e Imagens */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: var(--bg-color);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 5px solid var(--accent-color);
+        }
+
+        .img-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-style: italic;
+            border-radius: 8px;
+            margin: 15px 0;
+            border: 2px dashed #bbb;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        /* Botão Interativo (Curiosidades) */
+        .curiosity-btn {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .curiosity-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .curiosity-content {
+            display: none;
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid var(--primary-color);
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#olho">Olho Humano</a></li>
+                <li><a href="#visao">A Visão</a></li>
+                <li><a href="#reflexao">Reflexão</a></li>
+                <li><a href="#lentes">Lentes</a></li>
+                <li><a href="#refracao">Refração</a></li>
+                <li><a href="#indice">Índice de Refração</a></li>
+                <li><a href="#fibra">Fibra Óptica</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Óptica: Como a Luz nos Permite Enxergar o Mundo</h1>
+        <p>Um projeto interativo sobre a ciência da luz, lentes e a magia da visão.</p>
+    </div>
+
+    <section id="olho">
+        <h2>1. O Olho Humano</h2>
+        <p>O olho humano é um instrumento óptico complexo e perfeito. Ele capta a luz e a converte em impulsos elétricos que o cérebro interpreta.</p>
+        
+        <div class="img-placeholder">
+            [Insira aqui o Desenho/Esquema do Olho Humano]
+        </div>
+
+        <h3>Principais Partes:</h3>
+        <div class="grid-container">
+            <div class="card"><strong>Córnea:</strong> A "janela" transparente da frente do olho. Protege e ajuda a focar a luz.</div>
+            <div class="card"><strong>Humor aquoso:</strong> Líquido transparente que nutre a córnea e o cristalino, mantendo a pressão ocular.</div>
+            <div class="card"><strong>Pupila:</strong> A abertura escura no centro da íris que regula a entrada de luz.</div>
+            <div class="card"><strong>Íris:</strong> A parte colorida do olho. É um músculo que controla o tamanho da pupila.</div>
+            <div class="card"><strong>Cristalino:</strong> A lente natural do olho, que ajusta o foco para objetos próximos e distantes (acomodação visual).</div>
+            <div class="card"><strong>Retina:</strong> A "tela" no fundo do olho, cheia de células fotorreceptoras (cones e bastonetes) que captam a luz.</div>
+            <div class="card"><strong>Nervo óptico:</strong> O cabo que transmite os sinais elétricos da retina para o cérebro.</div>
+            <div class="card"><strong>Córtex visual:</strong> A área do cérebro (lobo occipital) responsável por processar a imagem.</div>
+        </div>
+    </section>
+
+    <section id="visao">
+        <h2>2. A Visão: Como a imagem é formada?</h2>
+        <p>O processo da visão é um verdadeiro trabalho em equipe das estruturas oculares:</p>
+        <ol>
+            <li>A luz refletida por um objeto entra pela <strong>Córnea</strong>, que faz o primeiro grande ajuste de foco.</li>
+            <li>A luz passa pela <strong>Pupila</strong> (controlada pela <strong>Íris</strong>).</li>
+            <li>Chega ao <strong>Cristalino</strong>, que faz o ajuste fino (foco) para que os raios de luz converjam perfeitamente na parte de trás do olho.</li>
+            <li>A imagem se projeta na <strong>Retina</strong> de forma <strong>invertida (de cabeça para baixo)</strong>.</li>
+            <li>A retina transforma essa luz em sinais elétricos, enviados pelo <strong>Nervo óptico</strong>.</li>
+            <li>O <strong>Córtex visual</strong> no cérebro recebe esses sinais, processa e inverte a imagem novamente, para que vejamos o mundo na posição correta!</li>
+        </ol>
+
+        <button class="curiosity-btn" onclick="toggleCuriosity('curiosity1')">👀 Ver Curiosidade Prática</button>
+        <div id="curiosity1" class="curiosity-content">
+            <strong>Você sabia?</strong> Quando você sai de um lugar escuro para um lugar claro, o sol ofusca sua visão por alguns segundos porque a sua íris precisa de um tempo para contrair a pupila e diminuir a entrada de luz!
+        </div>
+    </section>
+
+    <section id="reflexao">
+        <h2>3. Leis da Reflexão da Luz</h2>
+        <p>A reflexão ocorre quando a luz atinge uma superfície e volta a se propagar no meio de origem (como bater uma bola na parede).</p>
+        
+        <h3>As Duas Leis:</h3>
+        <ul>
+            <li><strong>1ª Lei da Reflexão:</strong> O raio incidente (que chega), a reta normal (perpendicular à superfície) e o raio refletido (que sai) estão no mesmo plano (são coplanares).</li>
+            <li><strong>2ª Lei da Reflexão:</strong> O ângulo de incidência (i) é sempre igual ao ângulo de reflexão (r).</li>
+        </ul>
+
+        <div class="img-placeholder">
+            [Insira aqui um esquema mostrando o raio incidente, refletido e os ângulos]
+        </div>
+
+        <h3>Exemplos no Cotidiano:</h3>
+        <p>O reflexo que você vê no espelho do banheiro, o brilho da lua (que reflete a luz do sol) e a capacidade de enxergarmos objetos não-luminosos (eles refletem a luz do ambiente até nossos olhos).</p>
+    </section>
+
+    <section id="lentes">
+        <h2>4. Lentes Esféricas</h2>
+        <p>As lentes esféricas refratam a luz para alterar a forma como vemos os objetos. Elas são divididas pelo formato de suas bordas.</p>
+
+        <h3>Lentes Convergentes (Bordas finas)</h3>
+        <p>Fazem os raios de luz se encontrarem em um único ponto (foco). Usadas para corrigir hipermetropia.</p>
+        <ul>
+            <li><strong>Biconvexa:</strong> Duas faces convexas (curvadas para fora).</li>
+            <li><strong>Plano-convexa:</strong> Uma face plana e outra convexa.</li>
+            <li><strong>Côncavo-convexa:</strong> Uma face côncava e outra convexa (mas a convexa é predominante).</li>
+        </ul>
+
+        <h3>Lentes Divergentes (Bordas espessas)</h3>
+        <p>Espalham os raios de luz. Usadas para corrigir miopia.</p>
+        <ul>
+            <li><strong>Bicôncava:</strong> Duas faces côncavas (curvadas para dentro).</li>
+            <li><strong>Plano-côncava:</strong> Uma face plana e outra côncava.</li>
+            <li><strong>Convexo-côncava:</strong> Uma face convexa e outra côncava (côncava predominante).</li>
+        </ul>
+
+        <div class="img-placeholder">
+            [Insira aqui a ilustração com o desenho dos 6 tipos de lentes]
+        </div>
+    </section>
+
+    <section id="refracao">
+        <h2>5. Refração da Luz</h2>
+        <p><strong>Conceito:</strong> É o fenômeno que ocorre quando a luz muda de meio de propagação (por exemplo, do ar para a água), sofrendo uma alteração na sua velocidade e, geralmente, um desvio na sua direção (ela "entorta").</p>
+        
+        <h3>Exemplos do dia a dia:</h3>
+        <ul>
+            <li>O canudo que parece "quebrado" quando colocado em um copo com água.</li>
+            <li>Uma piscina que parece mais rasa do que realmente é.</li>
+            <li>A formação do arco-íris (a luz do sol sofre refração nas gotas de chuva).</li>
+        </ul>
+
+        <div class="img-placeholder">
+            [Insira aqui a foto clássica do canudo/lápis no copo d'água]
+        </div>
+    </section>
+
+    <section id="indice">
+        <h2>6. Índice de Refração</h2>
+        <p><strong>O que representa:</strong> É um número (sem unidade de medida) que indica o quanto um meio dificulta a passagem da luz. É calculado pela razão entre a velocidade da luz no vácuo e a velocidade da luz no meio material.</p>
+        
+        <p><strong>Como influencia o comportamento da luz:</strong> Quanto maior o índice de refração de um material, menor é a velocidade da luz dentro dele, e maior será o desvio que o raio de luz sofrerá ao entrar nesse material.</p>
+
+        <h3>Exemplos de materiais:</h3>
+        <ul>
+            <li><strong>Vácuo:</strong> 1,00 (referência absoluta)</li>
+            <li><strong>Ar:</strong> ~ 1,00 (quase não altera a velocidade)</li>
+            <li><strong>Água:</strong> ~ 1,33</li>
+            <li><strong>Vidro comum:</strong> ~ 1,50</li>
+            <li><strong>Diamante:</strong> ~ 2,42 (É por ter um índice tão alto que o diamante brilha tanto, prendendo a luz lá dentro!)</li>
+        </ul>
+    </section>
+
+    <section id="fibra">
+        <h2>7. Fibra Óptica</h2>
+        <p>As fibras ópticas são filamentos finíssimos (como fios de cabelo) feitos de vidro puro ou plástico que transmitem luz ao longo de grandes distâncias.</p>
+
+        <h3>Como funciona?</h3>
+        <p>Ocorre o fenômeno da <strong>Reflexão Total Intena</strong>. A luz entra por uma das pontas e vai batendo nas paredes internas da fibra, refletindo continuamente sem escapar, até sair na outra ponta.</p>
+
+        <h3>Aplicações no Cotidiano:</h3>
+        <ul>
+            <li><strong>Internet de alta velocidade:</strong> Transmissão de dados a velocidades ultrarrápidas, conectando oceanos e continentes.</li>
+            <li><strong>Medicina (Endoscopias):</strong> Permite iluminar e visualizar o interior do corpo humano sem grandes cortes.</li>
+            <li><strong>Iluminação decorativa.</strong></li>
+        </ul>
+
+        <h3>Vantagens da Utilização:</h3>
+        <div class="grid-container">
+            <div class="card">🚀 Transmissão de dados quase na velocidade da luz.</div>
+            <div class="card">🛡️ Imunidade a interferências eletromagnéticas (não sofre ruídos como fios de cobre).</div>
+            <div class="card">🔒 Maior segurança de dados e capacidade incrível de banda larga.</div>
+        </div>
+
+        <button class="curiosity-btn" style="margin-top:20px;" onclick="toggleCuriosity('curiosity2')">💡 Ver Animação/Curiosidade</button>
+        <div id="curiosity2" class="curiosity-content">
+            <strong>Dica de Criatividade:</strong> O grupo pode adicionar aqui um GIF mostrando a reflexão total da luz dentro do cabo de fibra óptica! Substituam este texto pela tag de imagem.
+        </div>
+    </section>
+
+    <footer>
+        <p>Trabalho de Física - Óptica | Feito com criatividade pela nossa equipe!</p>
+    </footer>
+
+    <script>
+        // Função para mostrar/ocultar curiosidades
+        function toggleCuriosity(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "block") {
+                element.style.display = "none";
+            } else {
+                element.style.display = "block";
+            }
+        }
+
+        // Adiciona rolagem suave aos links do menu
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
